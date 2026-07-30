@@ -614,13 +614,13 @@
 
   </main>
 
-  <footer style="width: 100%; border-top: 4px solid #e31837; padding: 40px 0 20px 0; font-family: Arial, sans-serif; color: #333333; background-color: #ffffff; box-sizing: border-box; margin: 0;">
+ <footer style="width: 100%; border-top: 4px solid #e31837; padding: 40px 0 20px 0; font-family: Arial, sans-serif; color: #333333; background-color: #ffffff; box-sizing: border-box; margin: 0;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 25px; margin-bottom: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 25px; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
                 <div style="font-size: 32px; font-weight: bold; color: #e31837; letter-spacing: -1px;">
                     AARP<span style="font-size: 14px; vertical-align: super;">®</span>
                 </div>
-                <div style="display: flex; gap: 10px;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <a href="https://dailyhealthgood.site/vsl/" style="width: 36px; height: 36px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; overflow: hidden;"><img src="image/1.png" alt="Facebook" style="width: 36px; height: 36px; object-fit: contain;"></a>
                     <a href="https://dailyhealthgood.site/vsl/" style="width: 36px; height: 36px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; overflow: hidden;"><img src="image/2.png" alt="Twitter/X" style="width: 36px; height: 36px; object-fit: contain;"></a>
                     <a href="https://dailyhealthgood.site/vsl/" style="width: 36px; height: 36px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; overflow: hidden;"><img src="image/3.png" alt="YouTube" style="width: 36px; height: 36px; object-fit: contain;"></a>
@@ -630,7 +630,22 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 40px;">
+            <style>
+                @media (max-width: 768px) {
+                    .footer-grid-responsive {
+                        grid-template-columns: repeat(2, 1fr) !important;
+                        gap: 20px !important;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .footer-grid-responsive {
+                        grid-template-columns: 1fr !important;
+                        gap: 20px !important;
+                    }
+                }
+            </style>
+
+            <div class="footer-grid-responsive" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 40px;">
                 <div>
                     <h4 style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; color: #000000;">MEMBERSHIP</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 2.2;">
@@ -689,7 +704,6 @@
             </div>
         </div>
     </footer>
-
 </div>
 </body>
 </html>
